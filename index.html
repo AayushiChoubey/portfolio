@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayushi Choubey | Backend & Distributed Systems Engineer</title>
+  <meta name="description" content="Portfolio of Aayushi Choubey — Member of Technical Staff at Oracle Cloud Infrastructure (OCI), IIT Indore '24. Distributed Cloud Systems, Microservices, and High-Performance REST APIs." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef7ff',
+              100: '#d9edff',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .grid-bg {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.68);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    html:not(.dark) .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06);
+    }
+    .glow-badge {
+      box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 dark:bg-slate-950 dark:text-slate-100 light:bg-slate-50 light:text-slate-900 transition-colors duration-300 grid-bg min-h-screen selection:bg-sky-500 selection:text-white">
+
+  <!-- Ambient Top Glow -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[750px] h-[280px] bg-sky-500/15 blur-[130px] pointer-events-none -z-10"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center font-mono font-bold text-slate-950 text-sm shadow-md">AC</span>
+        <span class="font-semibold tracking-tight text-white group-hover:text-sky-400 transition">Aayushi Choubey</span>
+        <span class="hidden sm:inline-block text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-sky-400 border border-slate-700">OCI MTS</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-300 font-medium">
+        <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
+        <a href="#architecture" class="hover:text-sky-400 transition">Systems Deep-Dive</a>
+        <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-sky-400 transition">Tech Stack</a>
+        <a href="#achievements" class="hover:text-sky-400 transition">Awards</a>
+        <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="openCmdPalette()" class="hidden sm:flex items-center gap-2 text-xs font-mono px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:border-sky-500/50 hover:text-slate-200 transition">
+          <span>Quick Jump</span>
+          <kbd class="px-1.5 py-0.5 text-[10px] bg-slate-800 rounded text-slate-300">Ctrl K</kbd>
+        </button>
+        <a href="https://github.com/AayushiChoubey" target="_blank" rel="noopener" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition" title="GitHub">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aayushi-choubey-b6a9781bb/" target="_blank" rel="noopener" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-sky-400 hover:border-slate-700 transition" title="LinkedIn">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-24 space-y-24">
+
+    <!-- HERO SECTION -->
+    <section class="grid lg:grid-cols-12 gap-10 items-center pt-4">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono glow-badge">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Member of Technical Staff @ Oracle (OCI) · Bengaluru
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.12]">
+          Engineering resilient <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">distributed cloud systems</span> at scale.
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+          Backend Software Engineer with <span class="text-white font-medium">2+ years of production experience</span> building cloud control-plane microservices, high-performance REST APIs, and asynchronous workflow engines in <span class="text-sky-300 font-mono text-sm">Java, Dropwizard, Python, and Go</span>. B.Tech graduate from <span class="text-white font-medium">IIT Indore ('24)</span> focused on concurrency control, fault recovery, and cloud security.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+          <a href="#experience" class="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-sky-500/20">
+            Explore Production Impact
+          </a>
+          <a href="#projects" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-medium text-sm transition">
+            View Systems & Projects
+          </a>
+          <button onclick="copyEmail()" id="copyEmailBtn" class="px-4 py-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-800 font-mono text-xs transition flex items-center gap-2">
+            <span>aayushichoubey23@gmail.com</span>
+            <span class="text-sky-400">[Copy]</span>
+          </button>
+        </div>
+
+        <!-- Key Production Metrics Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+          <div class="glass-card p-3.5 rounded-xl">
+            <div class="text-xl sm:text-2xl font-bold text-white font-mono">7+ Regions</div>
+            <div class="text-xs text-slate-400 mt-0.5">Auth Circuit-Breaker Fix (~4h/incident saved)</div>
+          </div>
+          <div class="glass-card p-3.5 rounded-xl">
+            <div class="text-xl sm:text-2xl font-bold text-sky-400 font-mono">~95% Less</div>
+            <div class="text-xs text-slate-400 mt-0.5">Manual Security Triage across 8 Cloud Realms</div>
+          </div>
+          <div class="glass-card p-3.5 rounded-xl">
+            <div class="text-xl sm:text-2xl font-bold text-emerald-400 font-mono">73.8% Lower</div>
+            <div class="text-xs text-slate-400 mt-0.5">Modeled Grid Carbon Intensity (GreenCompute)</div>
+          </div>
+          <div class="glass-card p-3.5 rounded-xl">
+            <div class="text-xl sm:text-2xl font-bold text-indigo-400 font-mono">8 Shapes</div>
+            <div class="text-xs text-slate-400 mt-0.5">Compute Hardware Onboarded to Production</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Control Plane Terminal Card -->
+      <div class="lg:col-span-5">
+        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+          <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 text-xs font-mono text-slate-400">sccp-control-plane — profile.json</span>
+            </div>
+            <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">● HEALTHY</span>
+          </div>
+          <div class="p-5 font-mono text-xs sm:text-[13px] leading-relaxed space-y-3 text-slate-300">
+            <div><span class="text-sky-400">"engineer"</span>: <span class="text-amber-300">"Aayushi Choubey"</span>,</div>
+            <div><span class="text-sky-400">"role"</span>: <span class="text-amber-300">"Member of Technical Staff @ Oracle (OCI)"</span>,</div>
+            <div><span class="text-sky-400">"education"</span>: <span class="text-amber-300">"B.Tech EE, IIT Indore (2020–2024) | CPI: 8.02"</span>,</div>
+            <div><span class="text-sky-400">"coreDomain"</span>: [
+              <div class="pl-4 text-emerald-300">"Distributed Cloud Control Planes",</div>
+              <div class="pl-4 text-emerald-300">"Zero-Downtime Instance Migration",</div>
+              <div class="pl-4 text-emerald-300">"Asynchronous Workflows & Concurrency",</div>
+              <div class="pl-4 text-emerald-300">"Automated Cloud Security Remediation"</div>
+            ],</div>
+            <div><span class="text-sky-400">"primaryStack"</span>: [
+              <span class="text-indigo-300">"Java"</span>, <span class="text-indigo-300">"Dropwizard"</span>, <span class="text-indigo-300">"Jersey/JAX-RS"</span>, <span class="text-indigo-300">"Guice"</span>, <span class="text-indigo-300">"Oracle Kiev"</span>, <span class="text-indigo-300">"JDBI"</span>, <span class="text-indigo-300">"Terraform"</span>, <span class="text-indigo-300">"Python"</span>, <span class="text-indigo-300">"Go"</span>
+            ],</div>
+            <div><span class="text-sky-400">"awards"</span>: [
+              <span class="text-amber-300">"Oracle Team Player Award '26"</span>,
+              <span class="text-amber-300">"Oracle Budding Star '25"</span>
+            ]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section id="experience" class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Career Trajectory</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Production Work Experience</h2>
+        </div>
+        <span class="text-xs font-mono text-slate-400">Oracle Cloud Infrastructure (OCI) · Bengaluru, India</span>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Oracle MTS -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800/90 hover:border-sky-500/40 transition">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800/80">
+            <div>
+              <div class="flex items-center gap-3 flex-wrap">
+                <h3 class="text-xl font-bold text-white">Oracle — Member of Technical Staff</h3>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Compute Control Plane (SCCP)</span>
+              </div>
+              <p class="text-sm text-slate-400 mt-1">Bengaluru, India</p>
+            </div>
+            <span class="text-xs font-mono text-slate-300 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 self-start sm:self-center">Jul 2024 – Present</span>
+          </div>
+
+          <ul class="mt-5 space-y-3.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <li class="flex gap-3">
+              <span class="text-sky-400 font-mono mt-1">▹</span>
+              <span><strong class="text-white">Automated Decommissioning & Zero-Downtime Migration:</strong> Designed and developed REST APIs (<code class="text-sky-300 font-mono text-xs">Java, Dropwizard, Jersey/JAX-RS, Google Guice</code>) and asynchronous <code class="text-sky-300 font-mono text-xs">OCI Workflow</code> services to automate compute instance decommissioning and support zero-downtime instance migration. Implemented lifecycle state management, retries, rollback, cancellation, and audit tracking in <code class="text-sky-300 font-mono text-xs">Oracle Kiev</code> and <code class="text-sky-300 font-mono text-xs">Oracle Database (JDBC/JDBI)</code> for reliable execution and failure recovery.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-sky-400 font-mono mt-1">▹</span>
+              <span><strong class="text-white">Multi-Region Circuit Breaker Recovery (7+ Regions):</strong> Resolved a recurring authentication circuit breaker failure across 7+ cloud regions (<code class="text-sky-300 font-mono text-xs">OCI Identity/Auth, Vault, Secret Service</code>) that blocked automated infrastructure provisioning and caused an average delay of <strong class="text-emerald-400">4 hours per recorded incident</strong>. Delivered a permanent fix that restored automated provisioning and reduced reliance on manual recovery.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-sky-400 font-mono mt-1">▹</span>
+              <span><strong class="text-white">Thundering-Herd Concurrency Control:</strong> Detected and fixed a capacity-reconciliation failure that overstated available resources during thundering-herd bursts of instance launches, blocking infrastructure provisioning. Prevented allocation failures and retry storms through optimistic concurrency control and atomic state validation.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-sky-400 font-mono mt-1">▹</span>
+              <span><strong class="text-white">Fleet-Scale Terraform Provisioning:</strong> Automated compute instance provisioning with <code class="text-sky-300 font-mono text-xs">Terraform</code>, replacing repetitive manual CLI launches with a unified workflow to provision instances across <strong class="text-white">thousands of targeted hosts</strong>, monitored via <code class="text-sky-300 font-mono text-xs">Dropwizard Metrics, OpenCensus, and OCI Telemetry</code>.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-sky-400 font-mono mt-1">▹</span>
+              <span><strong class="text-white">Hardware Shape Onboarding across SDLC:</strong> Onboarded <strong class="text-white">8 new compute hardware shapes</strong> and ensured production readiness through cross-team validation of provisioning, lifecycle management, and billing across the System Development Life Cycle (SDLC), enabling cloud capacity expansion.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-sky-400 font-mono mt-1">▹</span>
+              <span><strong class="text-white">Software Supply-Chain Security & Quality Gates:</strong> Strengthened software supply-chain security by tightening <code class="text-sky-300 font-mono text-xs">Maven/Artifactory</code> repository restrictions, enforcing automated quality gates (<code class="text-sky-300 font-mono text-xs">JUnit, Mockito, AssertJ, Checkstyle, PMD, SpotBugs, JaCoCo</code>), and resolving artifact ownership conflicts with 5+ partner teams without disrupting production builds.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Oracle Software Intern -->
+        <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800/90 hover:border-sky-500/40 transition">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800/80">
+            <div>
+              <div class="flex items-center gap-3 flex-wrap">
+                <h3 class="text-xl font-bold text-white">Oracle — Software Intern</h3>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">Cloud Security Automation</span>
+              </div>
+              <p class="text-sm text-slate-400 mt-1">Bengaluru, India</p>
+            </div>
+            <span class="text-xs font-mono text-slate-300 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800 self-start sm:self-center">May 2023 – Jul 2023</span>
+          </div>
+
+          <ul class="mt-5 space-y-3.5 text-sm sm:text-[15px] text-slate-300 leading-relaxed">
+            <li class="flex gap-3">
+              <span class="text-indigo-400 font-mono mt-1">▹</span>
+              <span>Built a full-stack cloud security-remediation platform using <code class="text-indigo-300 font-mono text-xs">Python, Flask-RESTX, and React</code> to automate vulnerability discovery and validation across <strong class="text-white">8 cloud realms</strong>, supporting 3+ infrastructure teams and reducing manual intervention by approximately <strong class="text-emerald-400">95%</strong>.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-indigo-400 font-mono mt-1">▹</span>
+              <span>Engineered an extensible remediation engine with regex-based diagnosis, automated fixes, verification, and per-host failure reporting; evaluated against <strong class="text-white">7 recurring vulnerability classes</strong> and supported new rules without modifying the core architecture.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-indigo-400 font-mono mt-1">▹</span>
+              <span>Developed authenticated REST APIs and a React dashboard to replace manual CSV-based security triage, enabling <strong class="text-white">SLA-based prioritization</strong> and real-time remediation tracking.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEMS ARCHITECTURE DEEP-DIVE SECTION -->
+    <section id="architecture" class="space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Engineering Rigor</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Control-Plane Systems Deep-Dive</h2>
+        <p class="text-sm text-slate-400 mt-1">Core distributed systems patterns I design and operate in production.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono text-sky-400 uppercase mb-2">01 / State Machines & Async Workflows</div>
+            <h3 class="text-lg font-bold text-white mb-2">Zero-Downtime Instance Lifecycle</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Multi-step asynchronous workflows (<code class="text-xs font-mono text-sky-300">OCI Workflow + Work Requests</code>) backed by transactional state persistence in <code class="text-xs font-mono text-sky-300">Oracle Kiev</code> and <code class="text-xs font-mono text-sky-300">JDBI</code>. Supports idempotent retries, exponential backoff, safe rollback, and full audit trails during host decommissioning.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-400">
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Idempotency Tokens</span>
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Row Revision</span>
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Rollback Recovery</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono text-emerald-400 uppercase mb-2">02 / Concurrency & Burst Resilience</div>
+            <h3 class="text-lg font-bold text-white mb-2">Thundering-Herd Capacity Reconciliation</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Eliminated capacity over-reporting during high-concurrency instance launch bursts by enforcing optimistic concurrency checks, lease management, and atomic state transitions—preventing downstream allocation failures and retry storms.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-400">
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Optimistic Locking</span>
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Kiev Transactions</span>
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Burst Protection</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono text-indigo-400 uppercase mb-2">03 / Multi-Region Security & Fault Isolation</div>
+            <h3 class="text-lg font-bold text-white mb-2">Auth Circuit-Breaker & Supply-Chain Hardening</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Diagnosed and permanently resolved cross-region authentication circuit-breaker trips across 7+ regions (<code class="text-xs font-mono text-indigo-300">OCI Identity, Vault, Secret Service, FIPS</code>) and hardened Maven/Artifactory dependency boundaries across 5+ partner teams.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-400">
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Circuit Breakers</span>
+            <span class="px-2 py-0.5 bg-slate-900 rounded">FIPS Crypto</span>
+            <span class="px-2 py-0.5 bg-slate-900 rounded">Canary Validation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Open Source & Engineering Builds</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Featured Technical Projects</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Project 1: GreenCompute -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 border border-slate-800 hover:border-sky-500/40 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">Google Patchamomma 2026</span>
+              <a href="https://github.com/AayushiChoubey/greencompute-ai" target="_blank" rel="noopener" class="text-xs font-mono text-sky-400 hover:underline flex items-center gap-1">
+                <span>GitHub Repo</span> ↗
+              </a>
+            </div>
+            <h3 class="text-xl font-bold text-white">GreenCompute — Carbon-Aware Batch Optimizer</h3>
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+              Cloud-native batch scheduling platform on <strong class="text-white">Google Cloud Platform (GCP)</strong> built in <strong class="text-white">Python and Go</strong> that selects optimal cloud regions and Spot/Standard compute configurations while minimizing data transfer.
+            </p>
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
+              <li class="flex gap-2"><span class="text-emerald-400">✔</span><span>Demonstrated <strong class="text-white">73.8% lower modeled grid carbon intensity</strong> and <strong class="text-white">8.4% lower estimated compute cost</strong> in MVP benchmarks.</span></li>
+              <li class="flex gap-2"><span class="text-emerald-400">✔</span><span>Integrated <strong class="text-white">Gemini 2.5 Flash</strong> for intent parsing with locality, reliability, and deadline constraints; orchestrated via <strong class="text-white">Cloud Workflows, Cloud Batch, and BigQuery</strong>.</span></li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Python</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Go</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">GCP Cloud Workflows</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Cloud Batch</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">BigQuery</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Gemini 2.5 Flash</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Food Ordering & Management Platform -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 border border-slate-800 hover:border-sky-500/40 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono px-2.5 py-1 rounded bg-sky-500/10 text-sky-300 border border-sky-500/30">IIT Indore · High-Concurrency E-Commerce</span>
+              <a href="https://github.com/AayushiChoubey/Night-Canteen_PWA-Brute-Force" target="_blank" rel="noopener" class="text-xs font-mono text-sky-400 hover:underline flex items-center gap-1">
+                <span>GitHub Repo</span> ↗
+              </a>
+            </div>
+            <h3 class="text-xl font-bold text-white">Food Ordering & Management Platform</h3>
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+              Full-stack transaction and order fulfillment platform featuring real-time menu search, cart management, <strong class="text-white">Razorpay checkout</strong> with server-side signature verification, and live admin order tracking.
+            </p>
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
+              <li class="flex gap-2"><span class="text-sky-400">✔</span><span>Engineered <strong class="text-white">atomic inventory updates</strong> to prevent overselling and <strong class="text-white">idempotent payment handling</strong> to eliminate duplicate order processing.</span></li>
+              <li class="flex gap-2"><span class="text-sky-400">✔</span><span>Executed concurrent-user load testing to benchmark throughput, <strong class="text-white">p95 latency</strong>, and error rates under peak traffic spikes.</span></li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Node.js</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">React</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Firebase</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Razorpay API</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Idempotency</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Load Testing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TECH STACK MATRIX -->
+    <section id="skills" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Production-Verified Arsenal</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Technical Skills & Tooling</h2>
+        </div>
+        <div class="flex flex-wrap gap-2" id="skillFilters">
+          <button onclick="filterSkills('all')" data-filter="all" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-sky-500 text-slate-950 font-semibold transition">All</button>
+          <button onclick="filterSkills('lang')" data-filter="lang" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Languages</button>
+          <button onclick="filterSkills('backend')" data-filter="backend" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Frameworks & APIs</button>
+          <button onclick="filterSkills('dist')" data-filter="dist" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Distributed & DB</button>
+          <button onclick="filterSkills('cloud')" data-filter="cloud" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Cloud & IaC</button>
+          <button onclick="filterSkills('sec')" data-filter="sec" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Security & Quality</button>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="skillGrid">
+        <div data-cat="lang" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
+          <div class="text-xs font-mono text-sky-400 uppercase mb-3">Programming Languages</div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Java</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Python</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Go</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">C++</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">TypeScript</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">SQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Bash / Shell</span>
+          </div>
+        </div>
+
+        <div data-cat="backend" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
+          <div class="text-xs font-mono text-sky-400 uppercase mb-3">Frameworks & API Design</div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Dropwizard</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Jersey / JAX-RS</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Google Guice</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">OpenAPI / Swagger</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Jackson / HOCON</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Spring Boot</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Flask-RESTX</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Node.js / React / Next.js</span>
+          </div>
+        </div>
+
+        <div data-cat="dist" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
+          <div class="text-xs font-mono text-sky-400 uppercase mb-3">Distributed Systems & Storage</div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Oracle Kiev (Key-Value)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Oracle DB (JDBC/JDBI)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">OCI Workflow</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Work Requests</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Concurrency Control</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Idempotency</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">BigQuery / MongoDB / MySQL</span>
+          </div>
+        </div>
+
+        <div data-cat="cloud" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
+          <div class="text-xs font-mono text-sky-400 uppercase mb-3">Public Cloud, IaC & Release</div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Oracle Cloud (OCI SDK)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Terraform (IaC)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Google Cloud (GCP)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">CI/CD (Shepherd, ODO)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Canary Deployment</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Linux / GraalVM</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Maven / Artifactory / Git</span>
+          </div>
+        </div>
+
+        <div data-cat="sec" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
+          <div class="text-xs font-mono text-sky-400 uppercase mb-3">Security, Observability & Testing</div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">OCI Identity / IAM / Vault</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">FIPS Cryptography</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Dropwizard Metrics</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">OpenCensus / SLF4J</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">JUnit / Mockito / AssertJ</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Checkstyle / PMD / SpotBugs / JaCoCo</span>
+          </div>
+        </div>
+
+        <div data-cat="sec" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
+          <div class="text-xs font-mono text-sky-400 uppercase mb-3">AI Operations & Developer Tooling</div>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">OpenAI Codex</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">MCP Server</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Gemini 2.5 Flash / Vertex AI</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">AI Agent Configuration</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">AI-Assisted Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS, EDUCATION & LEADERSHIP BENTO GRID -->
+    <section id="achievements" class="space-y-8">
+      <div class="border-b border-slate-800 pb-4">
+        <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Recognition & Pedigree</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Awards, Education & Leadership</h2>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-6">
+        <!-- Awards Column -->
+        <div class="md:col-span-7 space-y-4">
+          <div class="glass-card p-5 rounded-2xl border border-amber-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-amber-300 uppercase">Oracle Recognition · 2026</span>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300">Award</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mt-1">Oracle Team Player Award (2026)</h3>
+            <p class="text-sm text-slate-300 mt-1">Recognized for dependable ownership and seamless production delivery of automated compute instance decommissioning.</p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-sky-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-sky-300 uppercase">Oracle Recognition · 2025</span>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-300">Award</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mt-1">Oracle Budding Star Award (2025)</h3>
+            <p class="text-sm text-slate-300 mt-1">Awarded for delivering Terraform-based provisioning, instance management APIs, and asynchronous workflows into production, and for remediating cloud security vulnerabilities.</p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-slate-800">
+            <div class="text-xs font-mono text-indigo-400 uppercase">National Hackathons & Competitive Ranks</div>
+            <h3 class="text-lg font-bold text-white mt-1">3x Hackathon Winner & Top 0.1% National Math Rank</h3>
+            <ul class="mt-2 space-y-1.5 text-sm text-slate-300">
+              <li>• <strong class="text-white">Hackathon Wins:</strong> IIT Indore Hackistica (2023), Witty Hacks 3.0 GitHub Track (2023), IIT Mandi Xpecto – Wires & Wonders (2022).</li>
+              <li>• <strong class="text-white">National Entrance & Board Distinctions:</strong> JEE Advanced AIR 7,373 & JEE Main 98.8th percentile (2020); CBSE Class X Mathematics National Top 0.1% (2018).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education & Leadership Column -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="glass-card p-6 rounded-2xl border border-slate-800">
+            <div class="text-xs font-mono text-sky-400 uppercase">Education</div>
+            <h3 class="text-lg font-bold text-white mt-1">Indian Institute of Technology (IIT) Indore</h3>
+            <p class="text-sm text-slate-300 mt-0.5">B.Tech. in Electrical Engineering · <strong class="text-white">CPI: 8.02</strong></p>
+            <p class="text-xs font-mono text-slate-400 mt-1">Jul 2020 – Jul 2024</p>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1 text-xs text-slate-300">
+              <div class="flex justify-between"><span>CBSE Class XII (2020)</span><span class="font-mono font-semibold text-white">94.50%</span></div>
+              <div class="flex justify-between"><span>CBSE Class X (2018)</span><span class="font-mono font-semibold text-white">95.50%</span></div>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-slate-800">
+            <div class="text-xs font-mono text-emerald-400 uppercase">Campus Leadership @ IIT Indore</div>
+            <ul class="mt-3 space-y-2.5 text-sm text-slate-300">
+              <li>
+                <div class="font-semibold text-white">Placement Manager</div>
+                <div class="text-xs text-slate-400">Training & Placement Cell, IIT Indore (2023–2024)</div>
+              </li>
+              <li>
+                <div class="font-semibold text-white">Member & Content Head</div>
+                <div class="text-xs text-slate-400">Academic Council, IIT Indore (2022–2024)</div>
+              </li>
+              <li>
+                <div class="font-semibold text-white">Event Head</div>
+                <div class="text-xs text-slate-400">Robotics Club, IIT Indore (2022–2024)</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER CTA -->
+    <section id="contact" class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 text-center space-y-6">
+      <span class="text-xs font-mono uppercase tracking-widest text-sky-400">Open to High-Impact Backend & Cloud Engineering Roles</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">Let's build resilient systems together.</h2>
+      <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+        Based in Bengaluru, India. Reach out directly for Backend Software Engineer (SDE-2) opportunities in distributed systems, cloud infrastructure, and high-scale platforms.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="mailto:aayushichoubey23@gmail.com" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition">
+          Email: aayushichoubey23@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/aayushi-choubey-b6a9781bb/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-medium text-sm transition">
+          Connect on LinkedIn ↗
+        </a>
+        <a href="https://github.com/AayushiChoubey" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-medium text-sm transition">
+          GitHub (@AayushiChoubey) ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-900 py-8 text-center text-xs font-mono text-slate-500">
+    Built for Aayushi Choubey · Member of Technical Staff @ Oracle (OCI) · IIT Indore '24
+  </footer>
+
+  <!-- Command Palette Modal (Ctrl+K) -->
+  <div id="cmdModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-start justify-center pt-24 px-4">
+    <div class="glass-card w-full max-w-lg rounded-2xl border border-slate-700 shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between">
+        <span class="text-xs font-mono text-sky-400">Quick Navigation Palette</span>
+        <button onclick="closeCmdPalette()" class="text-xs font-mono text-slate-400 hover:text-white">ESC</button>
+      </div>
+      <div class="p-2 divide-y divide-slate-800/60 text-sm">
+        <a href="#experience" onclick="closeCmdPalette()" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-slate-200">→ Go to Work Experience (Oracle MTS & Intern)</a>
+        <a href="#architecture" onclick="closeCmdPalette()" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-slate-200">→ Go to Control-Plane Systems Deep-Dive</a>
+        <a href="#projects" onclick="closeCmdPalette()" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-slate-200">→ Go to Featured Projects (GreenCompute & E-Commerce)</a>
+        <a href="https://github.com/AayushiChoubey" target="_blank" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-sky-400 font-mono text-xs">↗ Open GitHub (github.com/AayushiChoubey)</a>
+        <a href="https://www.linkedin.com/in/aayushi-choubey-b6a9781bb/" target="_blank" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-sky-400 font-mono text-xs">↗ Open LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText('aayushichoubey23@gmail.com');
+      const btn = document.getElementById('copyEmailBtn');
+      btn.innerHTML = '<span class="text-emerald-400">✔ Copied aayushichoubey23@gmail.com!</span>';
+      setTimeout(() => {
+        btn.innerHTML = '<span>aayushichoubey23@gmail.com</span><span class="text-sky-400">[Copy]</span>';
+      }, 2500);
+    }
+
+    function filterSkills(category) {
+      const cards = document.querySelectorAll('.skill-card');
+      const tabs = document.querySelectorAll('.skill-tab');
+      tabs.forEach(t => {
+        if (t.dataset.filter === category) {
+          t.className = 'skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-sky-500 text-slate-950 font-semibold transition';
+        } else {
+          t.className = 'skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition';
+        }
+      });
+      cards.forEach(c => {
+        if (category === 'all' || c.dataset.cat === category) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    function openCmdPalette() {
+      document.getElementById('cmdModal').classList.remove('hidden');
+      document.getElementById('cmdModal').classList.add('flex');
+    }
+    function closeCmdPalette() {
+      document.getElementById('cmdModal').classList.add('hidden');
+      document.getElementById('cmdModal').classList.remove('flex');
+    }
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        openCmdPalette();
+      }
+      if (e.key === 'Escape') closeCmdPalette();
+    });
+  </script>
+</body>
+</html>
