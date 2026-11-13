@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aayushi Choubey | Backend & Distributed Systems Engineer</title>
   <meta name="description" content="Portfolio of Aayushi Choubey — Member of Technical Staff at Oracle Cloud Infrastructure (OCI), IIT Indore '24. Distributed Cloud Systems, Microservices, and High-Performance REST APIs." />
+
+  <!-- OpenGraph / LinkedIn / Recruiter DM Preview Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aayushichoubey.github.io/portfolio/" />
+  <meta property="og:title" content="Aayushi Choubey | Backend & Distributed Systems Engineer (Oracle OCI · IIT Indore)" />
+  <meta property="og:description" content="Member of Technical Staff at Oracle Cloud Infrastructure (OCI). Architecting distributed cloud control planes, zero-downtime migration workflows, and high-performance REST APIs in Java, Dropwizard, Python, and Go." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aayushi Choubey | Backend & Distributed Systems Engineer" />
+  <meta name="twitter:description" content="Member of Technical Staff at Oracle (OCI) · B.Tech IIT Indore '24 · Distributed Systems, Microservices & Cloud Security Automation." />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +82,7 @@
         <span class="hidden sm:inline-block text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-sky-400 border border-slate-700">OCI MTS</span>
       </a>
 
-      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-300 font-medium">
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300 font-medium">
         <a href="#experience" class="hover:text-sky-400 transition">Experience</a>
         <a href="#architecture" class="hover:text-sky-400 transition">Systems Deep-Dive</a>
         <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
@@ -81,9 +91,13 @@
         <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5">
+        <a href="./Aayushi_Choubey_Software_Developer_Public_Safe.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold px-3 py-1.5 rounded-lg bg-sky-500/15 text-sky-300 border border-sky-500/30 hover:bg-sky-500 hover:text-slate-950 transition">
+          <span>Resume PDF</span>
+          <span>↗</span>
+        </a>
         <button onclick="openCmdPalette()" class="hidden sm:flex items-center gap-2 text-xs font-mono px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:border-sky-500/50 hover:text-slate-200 transition">
-          <span>Quick Jump</span>
+          <span>Jump</span>
           <kbd class="px-1.5 py-0.5 text-[10px] bg-slate-800 rounded text-slate-300">Ctrl K</kbd>
         </button>
         <a href="https://github.com/AayushiChoubey" target="_blank" rel="noopener" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition" title="GitHub">
@@ -111,20 +125,21 @@
         </h1>
 
         <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-          Backend Software Engineer with <span class="text-white font-medium">2+ years of production experience</span> building cloud control-plane microservices, high-performance REST APIs, and asynchronous workflow engines in <span class="text-sky-300 font-mono text-sm">Java, Dropwizard, Python, and Go</span>. B.Tech graduate from <span class="text-white font-medium">IIT Indore ('24)</span> focused on concurrency control, fault recovery, and cloud security.
+          Backend Software Engineer specializing in <span class="text-white font-medium">production cloud control-plane microservices</span>, high-performance REST APIs, and asynchronous workflow engines in <span class="text-sky-300 font-mono text-sm">Java, Dropwizard, Python, and Go</span>. B.Tech graduate from <span class="text-white font-medium">IIT Indore ('24)</span> focused on concurrency control, idempotency, fault recovery, and cloud security.
         </p>
 
         <div class="flex flex-wrap items-center gap-3.5 pt-2">
-          <a href="#experience" class="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-sky-500/20">
+          <a href="./Aayushi_Choubey_Software_Developer_Public_Safe.pdf" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-sky-500/20 flex items-center gap-2">
+            <span>View Resume (PDF)</span>
+            <span>↗</span>
+          </a>
+          <a href="#experience" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-medium text-sm transition">
             Explore Production Impact
           </a>
-          <a href="#projects" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-medium text-sm transition">
-            View Systems & Projects
+          <a href="https://www.linkedin.com/in/aayushi-choubey-b6a9781bb/" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-800 font-mono text-xs transition flex items-center gap-2">
+            <span>LinkedIn</span>
+            <span class="text-sky-400">↗</span>
           </a>
-          <button onclick="copyEmail()" id="copyEmailBtn" class="px-4 py-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-800 font-mono text-xs transition flex items-center gap-2">
-            <span>aayushichoubey23@gmail.com</span>
-            <span class="text-sky-400">[Copy]</span>
-          </button>
         </div>
 
         <!-- Key Production Metrics Bar -->
@@ -387,7 +402,7 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE TECH STACK MATRIX -->
+    <!-- INTERACTIVE TECH STACK MATRIX (100% Defensible Stack + Dedicated AI Tab) -->
     <section id="skills" class="space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
         <div>
@@ -401,6 +416,7 @@
           <button onclick="filterSkills('dist')" data-filter="dist" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Distributed & DB</button>
           <button onclick="filterSkills('cloud')" data-filter="cloud" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Cloud & IaC</button>
           <button onclick="filterSkills('sec')" data-filter="sec" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">Security & Quality</button>
+          <button onclick="filterSkills('ai')" data-filter="ai" class="skill-tab px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 transition">AI & Tooling</button>
         </div>
       </div>
 
@@ -415,7 +431,7 @@
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">TypeScript</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">JavaScript</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">SQL</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Bash / Shell</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Bash / POSIX Shell</span>
           </div>
         </div>
 
@@ -427,7 +443,7 @@
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Google Guice</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">OpenAPI / Swagger</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Jackson / HOCON</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Spring Boot</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Guava / Caffeine</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Flask-RESTX</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Node.js / React / Next.js</span>
           </div>
@@ -438,11 +454,11 @@
           <div class="flex flex-wrap gap-2 text-xs font-mono">
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Oracle Kiev (Key-Value)</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Oracle DB (JDBC/JDBI)</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">OCI Workflow</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">OCI Workflow / YAKQ</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Work Requests</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Concurrency Control</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Idempotency</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">BigQuery / MongoDB / MySQL</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Optimistic Concurrency</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Idempotency & Leases</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">BigQuery / Firebase</span>
           </div>
         </div>
 
@@ -454,7 +470,7 @@
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Google Cloud (GCP)</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">CI/CD (Shepherd, ODO)</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Canary Deployment</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Linux / GraalVM</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Oracle Linux / GraalVM</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">Maven / Artifactory / Git</span>
           </div>
         </div>
@@ -471,14 +487,14 @@
           </div>
         </div>
 
-        <div data-cat="sec" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
+        <div data-cat="ai" class="skill-card glass-card p-5 rounded-2xl border border-slate-800">
           <div class="text-xs font-mono text-sky-400 uppercase mb-3">AI Operations & Developer Tooling</div>
           <div class="flex flex-wrap gap-2 text-xs font-mono">
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">OpenAI Codex</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">MCP Server</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-white border border-slate-700">Gemini 2.5 Flash / Vertex AI</span>
             <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">AI Agent Configuration</span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">AI-Assisted Engineering</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 text-slate-300 border border-slate-800">AI Skill Development</span>
           </div>
         </div>
       </div>
@@ -562,11 +578,11 @@
       <span class="text-xs font-mono uppercase tracking-widest text-sky-400">Open to High-Impact Backend & Cloud Engineering Roles</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-white">Let's build resilient systems together.</h2>
       <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
-        Based in Bengaluru, India. Reach out directly for Backend Software Engineer (SDE-2) opportunities in distributed systems, cloud infrastructure, and high-scale platforms.
+        Based in Bengaluru, India. Reach out via LinkedIn or review my public resume for Backend Software Engineer (SDE-2) opportunities in distributed systems, cloud infrastructure, and high-scale platforms.
       </p>
       <div class="flex flex-wrap justify-center gap-4 pt-2">
-        <a href="mailto:aayushichoubey23@gmail.com" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition">
-          Email: aayushichoubey23@gmail.com
+        <a href="./Aayushi_Choubey_Software_Developer_Public_Safe.pdf" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition">
+          Download Public Resume (PDF) ↗
         </a>
         <a href="https://www.linkedin.com/in/aayushi-choubey-b6a9781bb/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-medium text-sm transition">
           Connect on LinkedIn ↗
@@ -591,6 +607,7 @@
         <button onclick="closeCmdPalette()" class="text-xs font-mono text-slate-400 hover:text-white">ESC</button>
       </div>
       <div class="p-2 divide-y divide-slate-800/60 text-sm">
+        <a href="./Aayushi_Choubey_Software_Developer_Public_Safe.pdf" target="_blank" onclick="closeCmdPalette()" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-emerald-400 font-mono text-xs">↗ View / Download Public Resume (PDF)</a>
         <a href="#experience" onclick="closeCmdPalette()" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-slate-200">→ Go to Work Experience (Oracle MTS & Intern)</a>
         <a href="#architecture" onclick="closeCmdPalette()" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-slate-200">→ Go to Control-Plane Systems Deep-Dive</a>
         <a href="#projects" onclick="closeCmdPalette()" class="block px-4 py-3 hover:bg-slate-800/60 rounded-lg text-slate-200">→ Go to Featured Projects (GreenCompute & E-Commerce)</a>
@@ -601,15 +618,6 @@
   </div>
 
   <script>
-    function copyEmail() {
-      navigator.clipboard.writeText('aayushichoubey23@gmail.com');
-      const btn = document.getElementById('copyEmailBtn');
-      btn.innerHTML = '<span class="text-emerald-400">✔ Copied aayushichoubey23@gmail.com!</span>';
-      setTimeout(() => {
-        btn.innerHTML = '<span>aayushichoubey23@gmail.com</span><span class="text-sky-400">[Copy]</span>';
-      }, 2500);
-    }
-
     function filterSkills(category) {
       const cards = document.querySelectorAll('.skill-card');
       const tabs = document.querySelectorAll('.skill-tab');
